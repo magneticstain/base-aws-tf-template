@@ -6,4 +6,4 @@ A base template for new Terraform plans for AWS
 
 * S3 backend
 * State locking via DynamoDB table
-* Modules out-of-the-box
+* Modules ready to go, out-of-the-box
