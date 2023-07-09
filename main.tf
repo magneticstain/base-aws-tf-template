@@ -8,10 +8,7 @@ terraform {
 
   required_version = ">= 1.2.0"
 
-  backend "s3" {
-    bucket = "tf-<PROJECT_NAME>"
-    region = "us-east-1"
-  }
+  backend "s3" {}
 }
 
 provider "aws" {
