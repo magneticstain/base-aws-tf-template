@@ -20,24 +20,17 @@ The plans use S3 as a backend and DynamoDB for state tracking. A script is inclu
 
 ### Set TF Vars
 
-Generate a `terraform.tfvars` file and fill in the variables as needed.
+Generate a `terraform.tfvars` file and fill in the variables as approriate.
 
-```hcl
-bucket = "tf-<PROJECT_NAME>"
-key    = "terraform.tfstate"
-region = "us-east-1"
-
-dynamodb_table = "tf-<PROJECT_NAME>"
-```
+TODO: add tf vars file template for your project as needed
 
 Example:
 
 ```hcl
-bucket = "tf-aws-tf-templates"
-key    = "terraform.tfstate"
-region = "us-east-1"
-
-dynamodb_table = "tf-aws-tf-templates"
+ami_id = "ami-053b0d53c279acc90"  # Ubuntu Server 22.04 LTS
+key_pair_name = "default"
+subnets = ["subnet-123456789", "subnet-987654321"]
+vpc = "vpc-12345abcde"
 ```
 
 ### Plan and Apply Plans
