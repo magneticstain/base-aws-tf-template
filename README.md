@@ -22,12 +22,7 @@ The plans use S3 as a backend and DynamoDB for state tracking. A script is inclu
 
 Generate a `terraform.tfvars` file and fill in the variables as approriate.
 
-```hcl
-ami_id = "<EC2_AMI>"  # any AMI of your choice can be used
-key_pair_name = "<EC2_SSH_KEY_PAIR_NAME>"
-subnets = [<SUBNETS_FOR_LBS>]
-vpc = "<VPC>"
-```
+TODO: add tf vars file template for your project as needed
 
 Example:
 
