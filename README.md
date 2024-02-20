@@ -60,13 +60,17 @@ region = "us-east-1"
 
 ### Generate TF Vars
 
-Generate a `terraform.tfvars` file and fill in the variables as approriate.
+Generate a `terraform.tfvars` file and fill in the variables as approriate. The only variable required for this template is the `accounts` string map. This is used to support multi-account architectures.
 
 Example:
 
 ```hcl
 var_1 = "a"
-var_2 = "b"
+accounts = {
+  "jcarlsonpurcell-personal" = "arn:aws:iam::509915386432:role/admin-cli",
+  "jcarlsonpurcell-personal-testing" = "arn:aws:iam::138277128026:role/admin-cli",
+  "jcarlsonpurcell-personal-testing-2" = "arn:aws:iam::685680125206:role/admin-cli"
+}
 ```
 
 ### Plan and Apply Plans

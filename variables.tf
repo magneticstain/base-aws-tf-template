@@ -1,12 +1,9 @@
-variable "var_1" {
-    type = string
-    description = "Example variable 1"
-    default = ""
-    nullable = false
-}
-
-variable "var_1" {
+variable "accounts" {
     type = map(string)
-    description = "Example variable 2"
-    default = {}
+    description = "Mapping of aliases->IAM roles of accounts to rollout plans to"
+    default = {
+        "jcarlsonpurcell-personal" = "arn:aws:iam::509915386432:role/admin-cli",
+        "jcarlsonpurcell-personal-testing" = "arn:aws:iam::138277128026:role/admin-cli",
+        "jcarlsonpurcell-personal-testing-2" = "arn:aws:iam::685680125206:role/admin-cli"
+    }
 }
