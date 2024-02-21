@@ -21,5 +21,5 @@ provider "aws" {
 }
 
 module "sample-module" {
-    source = "./modules/sample-module"
+  source = "./modules/sample_module"
 }
