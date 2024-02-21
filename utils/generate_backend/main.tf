@@ -1,10 +1,14 @@
+locals {
+  project_name = "base-project"
+}
+
 resource "aws_s3_bucket" "tf_backend" {
-  bucket_prefix = "tf-backend-"
+  bucket_prefix = "tf-backend_${local.project_name}-"
   force_destroy = true
 }
 
 resource "aws_dynamodb_table" "tf_backend" {
-  name            = "tf-backend"
+  name            = "tf-backend_${local.project_name}"
   hash_key        = "LockID"
   billing_mode    = "PROVISIONED"
   read_capacity   = 5
