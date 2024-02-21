@@ -20,6 +20,6 @@ provider "aws" {
   }
 }
 
-module "modules" {
-    source = "./modules"
+module "sample-module" {
+    source = "./modules/sample-module"
 }
